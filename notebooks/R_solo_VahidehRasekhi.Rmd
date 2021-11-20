@@ -511,18 +511,13 @@ alg_pct_adv %>%
   cor(use= 'pairwise.complete.obs') 
 ```
 
-```{r}
-alg_pct_adv %>% 
-  ggplot(aes(x=alg_1_pct_adv, y= alg_2_pct_adv))+
-  geom_point()+
-  labs(title= 'Algebra I vs. Algebera II Percentages by School', x= 'Algebra I Percentages', 
-  y= 'Algebra II Percentages')+
-theme(plot.title= element_text(hjust=0.5))
-  
-```
 
 ##Q28. Find all schools in Rutherford County that have "High School" in their name. For these schools, create a chart (your choice) showing the differences in pct_below_bsc, pct_bsc, pct_prof, and pct_adv for Algebra I when looking across all subgroups and grades.
 
+```{r}
+school_test %>% 
+  filter (school_name)
+```
 
 
 ##Q29. I claim that smaller schools do a better job preparing students for Algebra I standardized tests. Find the average number of valid tests (a proxy for the school size) for schools where the pct_prof_adv for Algebra I is greater than 95. Compare this to the average number of valid tests for all schools. In light of this result, how does my claim look?
